@@ -1,0 +1,14 @@
+version: '3'
+services:
+  web:
+    build:
+      context: /opt/web-chat/
+      dockerfile: Dockerfile.vue
+    ports:
+      - "8080:8080"
+  server:
+    build:
+      context: /opt/web-chat/
+      dockerfile: Dockerfile.go
+    ports:
+      - "8000:8000"
